@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+#container {
+    display: flex;
+    border: solid black;
+    flex-direction: column;
+}
+
+#display {
+    height: 75px;
+    border: solid black;
+    background-color: lightgrey; 
+}
+
+button {
+    height: 50px;
+}
+
+#number-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#number-container button {
+    flex: 1 0 25%;
+}

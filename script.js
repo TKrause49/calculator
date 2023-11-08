@@ -25,4 +25,4 @@ function operate (first, op, second) {
     if (op === '/') {return divide(first, second)};
 }
 
-console.log(operate(firstNumber, operator, secondNumber));
+// console.log(operate(firstNumber, operator, secondNumber));
