@@ -44,22 +44,6 @@ let firstNumber;
 let secondNumber;
 let operator;
 
-function selectNumber(number) {
-    if (displayValue) {display.textContent = ''};
-    display.textContent += number;
-}
-
-zero.addEventListener('click', () => selectNumber(zero.textContent));
-one.addEventListener('click', () => selectNumber(one.textContent));
-two.addEventListener('click', () => selectNumber(two.textContent));
-three.addEventListener('click', () => selectNumber(three.textContent));
-four.addEventListener('click', () => selectNumber(four.textContent));
-five.addEventListener('click', () => selectNumber(five.textContent));
-six.addEventListener('click', () => selectNumber(six.textContent));
-seven.addEventListener('click', () => selectNumber(seven.textContent));
-eight.addEventListener('click', () => selectNumber(eight.textContent));
-nine.addEventListener('click', () => selectNumber(nine.textContent));
-
 function clear () {
     display.textContent = '';
     firstNumber = null;
@@ -69,6 +53,11 @@ function clear () {
 }
 
 clearBtn.addEventListener('click', () => clear());
+
+function selectNumber(number) {
+    if (display.textContent === displayValue) {display.textContent = ''};
+    display.textContent += number;
+}
 
 function getNumber (op) {
     displayValue = display.textContent;
@@ -95,6 +84,19 @@ function getNumber (op) {
     }
 };
 
+//when I click on an operator button, and then click on a number button, 
+//the display.textcontent should be clear
+
+zero.addEventListener('click', () => selectNumber(0));
+one.addEventListener('click', () => selectNumber(1));
+two.addEventListener('click', () => selectNumber(2));
+three.addEventListener('click', () => selectNumber(3));
+four.addEventListener('click', () => selectNumber(4));
+five.addEventListener('click', () => selectNumber(5));
+six.addEventListener('click', () => selectNumber(6));
+seven.addEventListener('click', () => selectNumber(7));
+eight.addEventListener('click', () => selectNumber(8));
+nine.addEventListener('click', () => selectNumber(9));
 addition.addEventListener('click', () => getNumber(addition.textContent));
 subtraction.addEventListener('click', () => getNumber(subtraction.textContent));
 multiplication.addEventListener('click', () => getNumber(multiplication.textContent));
